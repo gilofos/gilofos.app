@@ -3,40 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΗΛΟΦΟΣ</title>
+    <title>ΓΗΛΟΦΟΣ APP</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.png" type="image/png">
     <style>
         body {
             margin: 0;
-            background: #1a1a1a;
+            padding: 0;
+            background: #121212;
             color: white;
-            font-family: sans-serif;
-            text-align: center;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
         }
-        .logo { width: 120px; border-radius: 20px; margin-bottom: 10px; }
-        h1 { margin: 5px 0; font-size: 2em; color: #f39c12; }
-        .info-box {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 15px;
-            width: 80%;
-            margin-top: 20px;
+
+        .container {
+            margin-top: 30px;
+            text-align: center;
+            width: 90%;
         }
-        .temp { font-size: 3em; font-weight: bold; }
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .btn {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.05em;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.1s;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-transform: uppercase;
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        /* Τρικολορέ Gradient Styles */
+        .btn-village {
+            background: linear-gradient(45deg, #1e3c72, #2a5298, #2ecc71);
+        }
+
+        .btn-weather {
+            background: linear-gradient(45deg, #f39c12, #e67e22, #e74c3c);
+        }
+
+        .btn-fb {
+            background: linear-gradient(45deg, #3b5998, #4e71ba, #00c6ff);
+        }
+
+        .btn-deskati {
+            background: linear-gradient(45deg, #8e44ad, #c0392b, #f1c40f);
+        }
     </style>
 </head>
 <body>
-    <img src="icon.png" class="logo">
-    <h1>ΓΗΛΟΦΟΣ</h1>
-    <div class="info-box">
-        <div class="temp">--°C</div>
-        <p>Αναμονή δεδομένων...</p>
+
+    <div class="container">
+        <img src="icon.png" alt="Γήλοφος" class="logo">
+        <h1>ΓΗΛΟΦΟΣ</h1>
+
+        <div class="btn-container">
+            <a href="http://gilofos.com" class="btn btn-village">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
+            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
+            <a href="https://www.facebook.com/groups/gilofos" class="btn btn-fb">FACEBOOK ΓΗΛΟΦΟΥ</a>
+            <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-deskati">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
+        </div>
     </div>
+
 </body>
 </html>
