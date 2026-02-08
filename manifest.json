@@ -1,0 +1,14 @@
+{
+  "name": "Ghilofos App",
+  "short_name": "Ghilofos",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
