@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ΓΗΛΟΦΟΣ APP</title>
     <style>
-        body { margin: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; }
-        .container { width: 95%; max-width: 450px; text-align: center; padding: 20px 0; }
+        body { margin: 0; background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 95%; max-width: 400px; text-align: center; padding: 20px 0; }
         .logo { width: 100px; border-radius: 20px; margin-bottom: 10px; }
-        .btn-container { display: flex; flex-direction: column; gap: 12px; width: 100%; }
-        .btn { display: block; padding: 18px; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-transform: uppercase; border: none; cursor: pointer; font-size: 1.1em; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .btn { display: block; padding: 18px; margin: 10px 0; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-transform: uppercase; text-align: center; font-size: 1.1em; border: none; width: 100%; cursor: pointer; }
         
         .btn-v { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
         .btn-w { background: linear-gradient(45deg, #f39c12, #e74c3c); }
@@ -17,17 +16,41 @@
         .btn-voice { background: linear-gradient(45deg, #8e44ad, #f1c40f); }
         .btn-p { background: linear-gradient(45deg, #00d2ff, #3a7bd5); }
         
-        /* ΛΙΣΤΑ ΤΗΛΕΦΩΝΩΝ */
-        #phoneList { display: none; margin-top: 15px; background: #1e1e1e; border-radius: 15px; padding: 10px; text-align: left; border: 1px solid #333; max-height: 60vh; overflow-y: auto; }
-        .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 8px; border-bottom: 1px solid #333; font-size: 0.9em; }
-        .phone-row span { color: #eee; font-weight: 500; }
-        .call-link { background: #2ecc71; color: white; text-decoration: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; font-size: 0.8em; }
-        .cat { background: #333; padding: 6px; font-weight: bold; font-size: 0.85em; color: #4facfe; margin-top: 15px; border-radius: 5px; text-align: center; }
+        #phoneList { display: none; background: #1e1e1e; border-radius: 15px; padding: 10px; margin-top: 10px; border: 1px solid #333; text-align: left; }
+        .row { display: flex; justify-content: space-between; align-items: center; padding: 12px 5px; border-bottom: 1px solid #333; }
+        .call { background: #2ecc71; color: white; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: bold; font-size: 0.8em; }
+        .head { color: #4facfe; font-weight: bold; padding: 10px 0; text-align: center; border-bottom: 2px solid #333; }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="icon.png" class="logo">
-        <h2>ΓΗΛΟΦΟΣ</h2>
-        <div class="btn-container">
-            <a href="http
+        <h1>ΓΗΛΟΦΟΣ</h1>
+        
+        <a href="http://gilofos.com" class="btn btn-v">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
+        <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-w">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
+        <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-f">FACEBOOK</a>
+        <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-voice">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
+        
+        <button onclick="f()" class="btn btn-p">📞 ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</button>
+
+        <div id="phoneList">
+            <div class="head">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
+            <div class="row"><span>ΔΗΜΑΡΧΕΙΟ</span><a href="tel:2462351101" class="call">ΚΛΗΣΗ</a></div>
+            <div class="row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351153" class="call">ΚΛΗΣΗ</a></div>
+            <div class="row"><span>ΒΟΗΘΕΙΑ ΣΠΙΤΙ</span><a href="tel:2462351151" class="call">ΚΛΗΣΗ</a></div>
+            <div class="head">ΥΓΕΙΑ & ΑΣΦΑΛΕΙΑ</div>
+            <div class="row"><span>ΑΣΤΥΝΟΜΙΑ</span><a href="tel:2462031111" class="call">ΚΛΗΣΗ</a></div>
+            <div class="row"><span>ΚΕΝΤΡΟ ΥΓΕΙΑΣ</span><a href="tel:2462351000" class="call">ΚΛΗΣΗ</a></div>
+            <div class="row"><span>ΠΥΡΟΣΒΕΣΤΙΚΗ</span><a href="tel:2462034199" class="call">ΚΛΗΣΗ</a></div>
+        </div>
+    </div>
+
+    <script>
+        function f() {
+            var e = document.getElementById("phoneList");
+            e.style.display = (e.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
