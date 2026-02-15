@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
@@ -8,66 +8,39 @@
     <link rel="icon" href="icon.png" type="image/png">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: white;
+            margin: 0; padding: 0; background: #121212; color: white;
             font-family: 'Segoe UI', Roboto, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; min-height: 100vh;
         }
-
-        .container {
-            margin-top: 30px;
-            text-align: center;
-            width: 90%;
-        }
-
-        .logo {
-            width: 110px;
-            height: 110px;
-            border-radius: 25px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-        }
-
+        .container { margin-top: 30px; text-align: center; width: 90%; max-width: 400px; }
+        .logo { width: 110px; height: 110px; border-radius: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.7); margin-bottom: 10px; }
+        h1 { font-size: 2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Κουμπιά Links */
+        .btn-container { display: flex; flex-direction: column; gap: 12px; width: 100%; margin-bottom: 30px; }
         .btn {
-            display: block;
-            padding: 18px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.1em;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            transition: transform 0.1s;
-            border: 1px solid rgba(255,255,255,0.1);
-            text-transform: uppercase;
+            display: block; padding: 15px; text-decoration: none; color: white;
+            font-weight: bold; font-size: 1.1em; border-radius: 15px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.1); text-transform: uppercase;
         }
-
-        /* Gradients */
         .btn-village { background: linear-gradient(45deg, #1e3c72, #2a5298, #2ecc71); }
         .btn-weather { background: linear-gradient(45deg, #f39c12, #e67e22, #e74c3c); }
         .btn-fb { background: linear-gradient(45deg, #3b5998, #4e71ba, #00c6ff); }
         .btn-deskati { background: linear-gradient(45deg, #8e44ad, #c0392b, #f1c40f); }
+
+        /* Τμήμα Τηλεφώνων */
+        .phone-section { width: 100%; text-align: left; margin-bottom: 30px; }
+        .cat-title { color: #4facfe; font-size: 0.9em; font-weight: bold; margin: 20px 0 10px 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .phone-card {
+            display: flex; justify-content: space-between; align-items: center;
+            background: #1e1e1e; padding: 12px 15px; border-radius: 12px; margin-bottom: 8px;
+            border: 1px solid #333;
+        }
+        .phone-name { font-size: 0.95em; font-weight: 500; }
+        .call-link {
+            background: #28a745; color: white; text-decoration: none;
+            padding: 8px 15px; border-radius: 8px; font-weight: bold; font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -79,28 +52,21 @@
         <div class="btn-container">
             <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
             <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
-            
             <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
-            
             <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-deskati" target="_blank">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
         </div>
-    </div>
 
-</body>
-</html>
+        <div class="phone-section">
+            <div class="cat-title">🆘 ΕΠΕΙΓΟΝΤΑ</div>
+            <div class="phone-card">
+                <span class="phone-name">ΑΣΤΥΝΟΜΙΑ / ΑΝΑΓΚΗ</span>
+                <a href="tel:100" class="call-link">ΚΛΗΣΗ</a>
+            </div>
+            <div class="phone-card">
+                <span class="phone-name">ΕΚΑΒ</span>
+                <a href="tel:166" class="call-link">ΚΛΗΣΗ</a>
+            </div>
 
-MANIFEST
-{
-  "name": "Ghilofos App",
-  "short_name": "Ghilofos",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
-}
+            <div class="cat-title">🏛️ ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
+            <div class="phone-card">
+                <span class="phone-name">ΔΗΜΑΡΧΕΙΟ</span>
