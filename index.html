@@ -1,77 +1,106 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gilofos app</title>
-    
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
+    <title>ΓΗΛΟΦΟΣ APP</title>
     <link rel="manifest" href="manifest.json">
-    
-    <meta name="theme-color" content="#1e3c72">
-
+    <link rel="icon" href="icon.png" type="image/png">
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #121212; color: white; margin: 0; padding: 15px; }
-        .header { text-align: center; padding: 10px; border-bottom: 2px solid #1e3c72; margin-bottom: 20px; }
-        h2 { color: #4facfe; margin: 0; }
-        
-        /* Στυλ για τα μεγάλα κουμπιά (Καιρός, FB, Φωνή) */
-        .main-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 25px; }
-        .menu-btn { 
-            background: #1e1e1e; border: 1px solid #333; padding: 15px; border-radius: 12px;
-            text-align: center; text-decoration: none; color: white; font-weight: bold;
+        body {
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: white;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .menu-btn i { display: block; font-size: 24px; margin-bottom: 5px; }
-        .btn-weather { border-bottom: 4px solid #fbc02d; }
-        .btn-fb { border-bottom: 4px solid #1877f2; }
-        .btn-voice { border-bottom: 4px solid #ff5252; }
 
-        /* Στυλ για τα Τηλέφωνα */
-        .container { max-width: 500px; margin: auto; }
-        .category { background: #1e3c72; padding: 8px; border-radius: 5px; font-weight: bold; margin-top: 15px; font-size: 13px; }
-        .phone-item { 
-            display: flex; justify-content: space-between; align-items: center; 
-            background: #1e1e1e; padding: 12px; margin-top: 5px; border-radius: 8px;
+        .container {
+            margin-top: 30px;
+            text-align: center;
+            width: 90%;
         }
-        .btn-call { 
-            background: #28a745; color: white; text-decoration: none; 
-            padding: 8px 15px; border-radius: 6px; font-weight: bold; font-size: 13px;
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
         }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: block;
+            padding: 18px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: transform 0.1s;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-transform: uppercase;
+        }
+
+        /* Gradients */
+        .btn-village { background: linear-gradient(45deg, #1e3c72, #2a5298, #2ecc71); }
+        .btn-weather { background: linear-gradient(45deg, #f39c12, #e67e22, #e74c3c); }
+        .btn-fb { background: linear-gradient(45deg, #3b5998, #4e71ba, #00c6ff); }
+        .btn-deskati { background: linear-gradient(45deg, #8e44ad, #c0392b, #f1c40f); }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h2>gilofos app</h2>
-    </div>
-
     <div class="container">
-        <div class="main-menu">
-            <a href="https://gilofos.github.io/KAIROS-GHILOFOU/kairos.html" class="menu-btn btn-weather">☀️ ΚΑΙΡΟΣ</a>
-            <a href="https://www.facebook.com/groups/123456789" class="menu-btn btn-fb">👥 FACEBOOK</a>
-            <a href="https://fwnhdeskaths.blogspot.com/" class="menu-btn btn-voice">📢 ΦΩΝΗ</a>
-            <a href="tel:100" class="menu-btn btn-voice" style="border-bottom-color: #ff5252;">🆘 ΑΝΑΓΚΗ</a>
+        <img src="icon.png" alt="Γήλοφος" class="logo">
+        <h1>ΓΗΛΟΦΟΣ</h1>
+
+        <div class="btn-container">
+            <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
+            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
+            
+            <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-deskati" target="_blank">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
         </div>
-
-        <div class="category">🏛️ ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
-        <div class="phone-item"><span class="name">ΔΗΜΑΡΧΕΙΟ</span><a href="tel:2462351101" class="btn-call">ΚΛΗΣΗ</a></div>
-        <div class="phone-item"><span class="name">ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351201" class="btn-call">ΚΛΗΣΗ</a></div>
-        <div class="phone-item"><span class="name">ΚΕΠ ΠΑΛΙΟΥΡΙΑΣ</span><a href="tel:2462033000" class="btn-call">ΚΛΗΣΗ</a></div>
-
-        <div class="category">🏥 ΥΓΕΙΑ</div>
-        <div class="phone-item"><span class="name">ΚΕΝΤΡΟ ΥΓΕΙΑΣ</span><a href="tel:2462350300" class="btn-call">ΚΛΗΣΗ</a></div>
-        <div class="phone-item"><span class="name">ΕΚΑΒ</span><a href="tel:166" class="btn-call">ΚΛΗΣΗ</a></div>
-        
-        <div class="category">📞 ΧΡΗΣΙΜΑ</div>
-        <div class="phone-item"><span class="name">ΑΣΤΥΝΟΜΙΑ</span><a href="tel:100" class="btn-call">ΚΛΗΣΗ</a></div>
-        <div class="phone-item"><span class="name">ΤΑΞΙ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031344" class="btn-call">ΚΛΗΣΗ</a></div>
     </div>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
 </body>
 </html>
+
+MANIFEST
+{
+  "name": "Ghilofos App",
+  "short_name": "Ghilofos",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
