@@ -3,46 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΗΛΟΦΟΣ APP</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="icon.png" type="image/png">
+    <title>ΤΗΛΕΦΩΝΑ - ΓΗΛΟΦΟΣ</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .container { width: 95%; max-width: 400px; text-align: center; padding-top: 30px; }
-        .logo { width: 120px; height: 120px; margin-bottom: 10px; border-radius: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.7); }
-        h1 { font-size: 2.2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); text-transform: uppercase; }
-        .btn-container { display: flex; flex-direction: column; gap: 15px; width: 100%; }
-        .btn { display: block; padding: 20px; text-decoration: none; color: white; font-weight: bold; font-size: 1.1em; border-radius: 20px; text-align: center; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.1s; }
-        .btn:active { transform: scale(0.98); }
-        
-        /* ΧΡΩΜΑΤΑ ΚΑΡΤΕΛΩΝ */
-        .btn-village { background: linear-gradient(45deg, #1e3c72, #2a5298, #2ecc71); }
-        .btn-weather { background: linear-gradient(45deg, #f39c12, #e67e22, #e74c3c); }
-        .btn-fb { background: linear-gradient(45deg, #3b5998, #4e71ba, #00c6ff); }
-        .btn-voice { background: linear-gradient(45deg, #8e44ad, #c0392b, #f1c40f); }
-        .btn-phones { background: linear-gradient(45deg, #00d2ff, #3a7bd5); }
+        body { margin: 0; background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 95%; max-width: 450px; padding: 20px 0; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #4facfe; text-decoration: none; font-weight: bold; }
+        .phone-section { background: #1e1e1e; border-radius: 15px; padding: 10px; border: 1px solid #333; }
+        .cat-title { background: #333; color: #4facfe; padding: 8px; font-weight: bold; text-align: center; border-radius: 8px; margin-top: 15px; font-size: 0.9em; text-transform: uppercase; }
+        .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 5px; border-bottom: 1px solid #333; }
+        .phone-name { font-size: 0.85em; color: #eee; }
+        .call-btn { background: #2ecc71; color: white; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: bold; font-size: 0.8em; }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="icon.png" alt="Γήλοφος" class="logo">
-        <h1>ΓΗΛΟΦΟΣ</h1>
-        <div class="btn-container">
-            <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
-            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
-            <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
-            <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-voice" target="_blank">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
+        <a href="index.html" class="back-btn">← ΠΙΣΩ</a>
+        <h2 style="text-align: center; color: #00d2ff;">ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</h2>
+        
+        <div class="phone-section">
+            <div class="cat-title">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
+            <div class="phone-row"><span>ΔΗΜΑΡΧΕΙΟ</span><a href="tel:2462351101" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351153" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΠ ΚΑΡΠΕΡΟΥ</span><a href="tel:2462351828" class="call-btn">ΚΛΗΣΗ</a></div>
             
-            <a href="phones.html" class="btn btn-phones">ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ ΔΗΜΟΥ ΔΕΣΚΑΤΗΣ</a>
+            <div class="cat-title">ΑΣΦΑΛΕΙΑ & ΥΓΕΙΑ</div>
+            <div class="phone-row"><span>ΑΣΤΥΝΟΜΙΑ</span><a href="tel:2462031111" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΠΥΡΟΣΒΕΣΤΙΚΗ</span><a href="tel:2462034199" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΝΤΡΟ ΥΓΕΙΑΣ</span><a href="tel:2462351000" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΝΟΣΟΚΟΜΕΙΟ ΓΡΕΒ.</span><a href="tel:2462350100" class="call-btn">ΚΛΗΣΗ</a></div>
+
+            <div class="cat-title">ΣΧΟΛΕΙΑ</div>
+            <div class="phone-row"><span>ΔΗΜΟΤΙΚΟ</span><a href="tel:2462031227" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΓΥΜΝΑΣΙΟ</span><a href="tel:2462031232" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΛΥΚΕΙΟ</span><a href="tel:2462031360" class="call-btn">ΚΛΗΣΗ</a></div>
+
+            <div class="cat-title">ΑΛΛΑ</div>
+            <div class="phone-row"><span>ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ</span><a href="tel:2462036404" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΕΛΤΑ</span><a href="tel:2462031200" class="call-btn">ΚΛΗΣΗ</a></div>
         </div>
     </div>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js');
-            });
-        }
-    </script>
 </body>
 </html>
