@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΗΛΟΦΟΣ APP</title>
+    <title>ΤΗΛΕΦΩΝΑ - ΓΗΛΟΦΟΣ</title>
     <style>
         body { margin: 0; background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
-        .container { width: 95%; max-width: 450px; text-align: center; padding: 20px 0; }
-        .logo { width: 100px; border-radius: 20px; margin-bottom: 10px; }
-        .main-btn { display: block; padding: 18px; margin: 12px 0; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-transform: uppercase; font-size: 1.1em; text-align: center; border: none; }
-        
-        .btn-v { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
-        .btn-w { background: linear-gradient(45deg, #f39c12, #e74c3c); }
-        .btn-f { background: linear-gradient(45deg, #3b5998, #00c6ff); }
-        .btn-voice { background: linear-gradient(45deg, #8e44ad, #f1c40f); }
-        .btn-p { background: linear-gradient(45deg, #00d2ff, #3a7bd5); }
+        .container { width: 95%; max-width: 450px; padding: 20px 0; }
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #4facfe; text-decoration: none; font-weight: bold; border: 1px solid #4facfe; padding: 5px 15px; border-radius: 10px; }
+        .phone-section { background: #1e1e1e; border-radius: 15px; padding: 10px; border: 1px solid #333; }
+        .cat-title { background: #333; color: #4facfe; padding: 8px; font-weight: bold; text-align: center; border-radius: 8px; margin-top: 15px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
+        .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 5px; border-bottom: 1px solid #333; }
+        .phone-row:last-child { border: none; }
+        .phone-name { font-size: 0.8em; color: #eee; font-weight: 500; max-width: 70%; }
+        .call-btn { background: #2ecc71; color: white; text-decoration: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; font-size: 0.75em; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        h2 { text-align: center; color: #00d2ff; margin-bottom: 5px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="icon.png" class="logo">
-        <h2 style="color: #00d2ff;">ΓΗΛΟΦΟΣ</h2>
+        <a href="index.html" class="back-btn">← ΠΙΣΩ</a>
+        <h2>ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</h2>
+        <p style="text-align:center; font-size:0.8em; color:#888; margin-bottom:20px;">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ & ΥΠΗΡΕΣΙΕΣ</p>
         
-        <a href="http://gilofos.com" class="main-btn btn-v">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
-        <a href="https://gilofos.github.io/weather-gilofos/" class="main-btn btn-w">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
-        <a href="https://www.facebook.com/profile.php?id=100003010373079" class="main-btn btn-f">FACEBOOK</a>
-        <a href="https://www.facebook.com/profile.php?id=61580420192179" class="main-btn btn-voice">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
-        
-        <a href="phones.html" class="main-btn btn-p">📞 ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</a>
-    </div>
-</body>
-</html>
+        <div class="phone-section">
+            <div class="cat-title">ΔΗΜΟΣ & ΔΙΟΙΚΗΣΗ</div>
+            <div class="phone-row"><span>ΔΗΜΑΡΧΕΙΟ / ΔΗΜΑΡΧΟΣ</span><a href="tel:2462351101" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>Ν.Π.Δ.Δ. ΑΝΔΡΟΜΑΝΑ</span><a href="tel:2462351122" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΔΗΜΟΤΟΛΟΓΙΑ-ΛΗΞΙΑΡΧΕΙΟ</span><a href="tel:2462351102" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351153" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΠ ΚΑΡΠΕΡΟΥ</span><a href="tel:2462351828" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΝΤΡΟ ΚΟΙΝΟΤΗΤΑΣ</span><a href="tel:2462351149" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΤΟ ΣΠΙΤΙ (Δ)</span><a href="tel:2462351151" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΤΟ ΣΠΙΤΙ (Κ)</span><a href="tel:2462351821" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>Ο.Α.Ε.Δ.</span><a href="tel:2462351114" class="call-btn">ΚΛΗΣΗ</a></div>
+
+            <div class="cat-title">ΑΣΦΑΛΕΙΑ & ΥΓΕΙΑ</div>
+            <div class="phone-row"><span>ΑΣΤΥΝΟΜΙΑ (ΑΞ. ΥΠΗΡ.)</span><a href="tel:2462031111" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΑΣΤΥΝΟΜΙΑ (ΔΙΟΙΚΗΤΗΣ)</span><a href="tel:2462031443" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΠΥΡΟΣΒΕΣΤΙΚΗ</span><a href="tel:2462034199" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΕΝΤΡΟ ΥΓΕΙΑΣ</span><a href="tel:2462351000" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΝΟΣΟΚΟΜΕΙΟ ΓΡΕΒΕΝΩΝ</span><a href="tel:2462350100" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΚΤΗΝΙΑΤΡΕΙΟ</span><a href="tel:2462031214" class="call-btn">ΚΛΗΣΗ</a></div>
+
+            <div class="cat-title">ΕΚΠΑΙΔΕΥΣΗ</div>
+            <div class="phone-row"><span>Α' ΔΗΜΟΤΙΚΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031227" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>Β' ΔΗΜΟΤΙΚΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031222" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΓΥΜΝΑΣΙΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031232" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΛΥΚΕΙΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031360" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΕΠΑ.Λ. ΜΑΝΟΥΣΑΚΕΙΟ</span><a href="tel:2462032756" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΠΑΙΔΙΚΟΣ ΣΤΑΘΜΟΣ</span><a href="tel:2462031204" class="call-btn">ΚΛΗΣΗ</a></div>
+
+            <div class="cat-title">ΥΠΗΡΕΣΙΕΣ & ΤΡΑΠΕΖΕΣ</div>
+            <div class="phone-row"><span>ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ</span><a href="tel:2462036404" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-row"><span>ΕΘΝΙΚΗ (ΕΤΕ)</span><a href="tel:2462036211" class="call-btn">ΚΛΗΣΗ</a></div>
+            <div class="phone-
