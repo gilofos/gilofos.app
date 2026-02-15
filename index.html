@@ -5,63 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ΓΗΛΟΦΟΣ APP</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .container { width: 95%; max-width: 400px; text-align: center; padding-top: 20px; padding-bottom: 50px; }
-        .logo { width: 100px; height: 100px; border-radius: 20px; margin-bottom: 10px; }
-        h1 { font-size: 1.8em; margin-bottom: 20px; text-transform: uppercase; }
-        .btn-container { display: flex; flex-direction: column; gap: 12px; width: 100%; }
-        .btn { display: block; padding: 18px; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-align: center; text-transform: uppercase; border: none; cursor: pointer; font-size: 1em; }
+        body { margin: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 95%; max-width: 450px; text-align: center; padding: 20px 0; }
+        .logo { width: 100px; border-radius: 20px; margin-bottom: 10px; }
+        .btn-container { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+        .btn { display: block; padding: 18px; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-transform: uppercase; border: none; cursor: pointer; font-size: 1em; }
+        .btn-v { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
+        .btn-w { background: linear-gradient(45deg, #f39c12, #e74c3c); }
+        .btn-f { background: linear-gradient(45deg, #3b5998, #00c6ff); }
+        .btn-p { background: linear-gradient(45deg, #00d2ff, #3a7bd5); width: 100%; }
         
-        .btn-village { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
-        .btn-weather { background: linear-gradient(45deg, #f39c12, #e74c3c); }
-        .btn-fb { background: linear-gradient(45deg, #3b5998, #00c6ff); }
-        .btn-voice { background: linear-gradient(45deg, #8e44ad, #f1c40f); }
-        .btn-phones { background: linear-gradient(45deg, #00d2ff, #3a7bd5); width: 100%; }
-
         /* ΛΙΣΤΑ ΤΗΛΕΦΩΝΩΝ */
-        #phoneList { display: none; margin-top: 15px; background: #1e1e1e; border-radius: 15px; padding: 10px; text-align: left; border: 1px solid #333; }
-        .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #333; font-size: 0.9em; }
-        .phone-row:last-child { border: none; }
-        .call-link { background: #2ecc71; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-weight: bold; font-size: 0.8em; }
-        .cat-title { background: #333; padding: 5px 10px; font-weight: bold; font-size: 0.8em; color: #4facfe; margin-top: 10px; border-radius: 5px; }
+        #phoneList { display: none; margin-top: 15px; background: #1e1e1e; border-radius: 15px; padding: 10px; text-align: left; border: 1px solid #333; max-height: 60vh; overflow-y: auto; }
+        .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 8px; border-bottom: 1px solid #333; font-size: 0.85em; }
+        .phone-row span { max-width: 70%; }
+        .call-link { background: #2ecc71; color: white; text-decoration: none; padding: 6px 12px; border-radius: 8px; font-weight: bold; }
+        .cat { background: #333; padding: 6px; font-weight: bold; font-size: 0.8em; color: #4facfe; margin-top: 10px; border-radius: 5px; text-align: center; }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="icon.png" class="logo">
-        <h1>ΓΗΛΟΦΟΣ</h1>
+        <h2>ΓΗΛΟΦΟΣ</h2>
         <div class="btn-container">
-            <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
-            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
-            <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
-            <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-voice" target="_blank">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
-            
-            <button class="btn btn-phones" onclick="togglePhones()">ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</button>
+            <a href="http://gilofos.com" class="btn btn-v" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
+            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-w" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
+            <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-f" target="_blank">FACEBOOK</a>
+            <button class="btn btn-p" onclick="togglePhones()">📞 ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</button>
             
             <div id="phoneList">
-                <div class="cat-title">ΕΠΕΙΓΟΝΤΑ & ΑΡΧΕΣ</div>
-                <div class="phone-row"><span>ΑΣΤΥΝΟΜΙΑ</span><a href="tel:2462031111" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="cat">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
+                <div class="phone-row"><span>ΔΗΜΑΡΧΕΙΟ / ΔΗΜΑΡΧΟΣ</span><a href="tel:2462351101" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΝΠΔΔ ΑΝΔΡΟΜΑΝΑ</span><a href="tel:2462351122" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΔΕΠΑΠ</span><a href="tel:2462351117" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΔΗΜΟΤΟΛΟΓΙΟ / ΛΗΞΙΑΡΧΕΙΟ</span><a href="tel:2462351102" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351153" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΚΕΠ ΚΑΡΠΕΡΟΥ</span><a href="tel:2462351828" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΚΕΝΤΡΟ ΚΟΙΝΟΤΗΤΑΣ</span><a href="tel:2462351149" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΠΙΤΙ (ΔΕΣΚ)</span><a href="tel:2462351151" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΠΙΤΙ (ΚΑΡΠ)</span><a href="tel:2462351821" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΚΑΠΗ</span><a href="tel:2462351138" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΣΦΑΓΕΙΑ</span><a href="tel:2462032081" class="call-link">ΚΛΗΣΗ</a></div>
+
+                <div class="cat">ΥΓΕΙΑ & ΑΣΦΑΛΕΙΑ</div>
+                <div class="phone-row"><span>ΑΣΤΥΝΟΜΙΑ (ΥΠΗΡΕΣΙΑ)</span><a href="tel:2462031111" class="call-link">ΚΛΗΣΗ</a></div>
                 <div class="phone-row"><span>ΠΥΡΟΣΒΕΣΤΙΚΗ</span><a href="tel:2462034199" class="call-link">ΚΛΗΣΗ</a></div>
                 <div class="phone-row"><span>ΚΕΝΤΡΟ ΥΓΕΙΑΣ</span><a href="tel:2462351000" class="call-link">ΚΛΗΣΗ</a></div>
-                
-                <div class="cat-title">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
-                <div class="phone-row"><span>ΔΗΜΑΡΧΕΙΟ</span><a href="tel:2462351101" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462351153" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΔΗΜΟΤΟΛΟΓΙΟ</span><a href="tel:2462351102" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΠΙΤΙ (Δ)</span><a href="tel:2462351151" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΒΟΗΘΕΙΑ ΣΠΙΤΙ (Κ)</span><a href="tel:2462351821" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΚΑΠΗ</span><a href="tel:2462351138" class="call-link">ΚΛΗΣΗ</a></div>
-                
-                <div class="cat-title">ΣΧΟΛΕΙΑ</div>
-                <div class="phone-row"><span>Α' ΔΗΜΟΤΙΚΟ</span><a href="tel:2462031227" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΓΥΜΝΑΣΙΟ</span><a href="tel:2462031232" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΛΥΚΕΙΟ</span><a href="tel:2462031360" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΠΕΡΙΦΕΡΕΙΑ ΓΡΕΒΕΝΩΝ</span><a href="tel:2462353333" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΝΟΣΟΚΟΜΕΙΟ ΓΡΕΒΕΝΩΝ</span><a href="tel:2462350100" class="call-link">ΚΛΗΣΗ</a></div>
 
-                <div class="cat-title">ΥΠΗΡΕΣΙΕΣ & ΤΡΑΠΕΖΕΣ</div>
-                <div class="phone-row"><span>ΠΕΙΡΑΙΩΣ</span><a href="tel:2462036404" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΕΘΝΙΚΗ</span><a href="tel:2462036211" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="cat">ΕΚΠΑΙΔΕΥΣΗ</div>
+                <div class="phone-row"><span>Α' ΔΗΜΟΤΙΚΟ ΔΕΣΚ.</span><a href="tel:2462031227" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>Β' ΔΗΜΟΤΙΚΟ ΔΕΣΚ.</span><a href="tel:2462031222" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΓΥΜΝΑΣΙΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031232" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΛΥΚΕΙΟ ΔΕΣΚΑΤΗΣ</span><a href="tel:2462031360" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΕΠΑΛ (ΜΑΝΟΥΣΑΚΕΙΟ)</span><a href="tel:2462032756" class="call-link">ΚΛΗΣΗ</a></div>
+
+                <div class="cat">ΥΠΗΡΕΣΙΕΣ & ΤΡΑΠΕΖΕΣ</div>
+                <div class="phone-row"><span>ΤΡΑΠΕΖΑ ΠΕΙΡΑΙΩΣ</span><a href="tel:2462036404" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΕΘΝΙΚΗ ΤΡΑΠΕΖΑ</span><a href="tel:2462036211" class="call-link">ΚΛΗΣΗ</a></div>
                 <div class="phone-row"><span>ΕΛΤΑ</span><a href="tel:2462031200" class="call-link">ΚΛΗΣΗ</a></div>
-                <div class="phone-row"><span>ΔΕΗ (ΒΛΑΒΕΣ)</span><a href="tel:2462081908" class="call-link">ΚΛΗΣΗ</a></div>
+                <div class="phone-row"><span>ΔΕΗ</span><a href="tel:2462081908" class="call-link">ΚΛΗΣΗ</a></div>
             </div>
         </div>
     </div>
@@ -69,11 +73,8 @@
     <script>
         function togglePhones() {
             var x = document.getElementById("phoneList");
-            if (x.style.display === "none" || x.style.display === "") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
+            x.style.display = (x.style.display === "block") ? "none" : "block";
+            if(x.style.display === "block") x.scrollIntoView({behavior: "smooth"});
         }
     </script>
 </body>
