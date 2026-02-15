@@ -3,83 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΗΛΟΦΟΣ APP</title>
+    <title>ΓΗΛΟΦΟΣ APP v3</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.png" type="image/png">
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .container { margin-top: 30px; text-align: center; width: 95%; }
-        .logo { width: 110px; height: 110px; border-radius: 25px; margin-bottom: 10px; }
-        h1 { font-size: 2em; margin-bottom: 25px; }
+        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .container { margin-top: 30px; text-align: center; width: 90%; }
+        .logo { width: 110px; height: 110px; border-radius: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.7); margin-bottom: 10px; }
+        h1 { font-size: 2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .btn-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 350px; margin: 0 auto; }
-        .btn { display: block; padding: 18px; text-decoration: none; color: white; font-weight: bold; border-radius: 15px; text-align: center; text-transform: uppercase; cursor: pointer; font-size: 1.1em; border: none; }
+        .btn { display: block; padding: 18px; text-decoration: none; color: white; font-weight: bold; font-size: 1.1em; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.1s; border: 1px solid rgba(255,255,255,0.1); text-transform: uppercase; cursor: pointer; }
         
         .btn-village { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
         .btn-weather { background: linear-gradient(45deg, #f39c12, #e74c3c); }
-        .btn-fb { background: linear-gradient(45deg, #3b5998, #00c6ff); }
+        .btn-fb { background: linear-gradient(45deg, #3b5998, #4e71ba); }
+        .btn-deskati { background: linear-gradient(45deg, #8e44ad, #c0392b); }
         .btn-phones { background: linear-gradient(45deg, #00b09b, #96c93d); }
 
-        /* Η ΛΙΣΤΑ ΜΕ ΤΑ ΤΗΛΕΦΩΝΑ */
-        #phone-overlay {
-            display: none; 
-            position: fixed; 
-            top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(0,0,0,0.9); 
-            z-index: 1000;
+        /* ΛΙΣΤΑ ΤΗΛΕΦΩΝΩΝ (OVERLAY) */
+        #phone-list {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .phone-box {
-            background: #222;
-            width: 85%;
-            padding: 20px;
-            border-radius: 20px;
-            border: 2px solid #00b09b;
-        }
-        .phone-entry {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid #444;
-            font-size: 1.1em;
-        }
-        .phone-entry a { color: #96c93d; text-decoration: none; font-weight: bold; }
-        .close-btn {
-            margin-top: 20px;
-            background: #e74c3c;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <img src="icon.png" alt="Γήλοφος" class="logo">
-        <h1>ΓΗΛΟΦΟΣ</h1>
-
-        <div class="btn-container">
-            <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
-            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
-            <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
-            
-            <div class="btn btn-phones" onclick="document.getElementById('phone-overlay').style.display='flex'">ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ</div>
-        </div>
-    </div>
-
-    <div id="phone-overlay">
-        <div class="phone-box">
-            <h2 style="color:#00b09b">ΤΗΛΕΦΩΝΑ ΔΕΣΚΑΤΗΣ</h2>
-            <div class="phone-entry"><span>ΔΗΜΟΣ:</span> <a href="tel:2462351101">2462351101</a></div>
-            <div class="phone-entry"><span>Κ. ΥΓΕΙΑΣ:</span> <a href="tel:2462351000">2462351000</a></div>
-            <div class="phone-entry"><span>ΑΣΤΥΝΟΜΙΑ:</span> <a href="tel:2462031111">2462031111</a></div>
-            <div class="phone-entry"><span>ΠΥΡΟΣΒ.:</span> <a href="tel:2462034199">2462034199</a></div>
-            <div class="phone-entry"><span>ΚΕΠ:</span> <a href="tel:2462351153">2462351153</a></div>
-            <div class="close-btn" onclick="document.getElementById('phone-overlay').style.display='none'">ΕΠΙΣΤΡΟΦΗ</div>
-        </div>
-    </div>
-
-</body>
-</html>
+        .phone-
