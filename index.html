@@ -10,33 +10,26 @@
         body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .container { width: 95%; max-width: 400px; text-align: center; padding-top: 30px; }
         .logo { width: 120px; height: 120px; margin-bottom: 10px; border-radius: 25px; box-shadow: 0 8px 25px rgba(0,0,0,0.7); }
-        h1 { font-size: 2.2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        h1 { font-size: 2.2em; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); text-transform: uppercase; }
         .btn-container { display: flex; flex-direction: column; gap: 15px; width: 100%; }
         .btn { display: block; padding: 20px; text-decoration: none; color: white; font-weight: bold; font-size: 1.1em; border-radius: 20px; text-align: center; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
         
-        /* ΧΡΩΜΑΤΑ ΟΠΩΣ ΤΗ ΦΩΤΟΓΡΑΦΙΑ ΣΟΥ */
         .btn-village { background: linear-gradient(45deg, #1e3c72, #2a5298, #2ecc71); }
         .btn-weather { background: linear-gradient(45deg, #f39c12, #e67e22, #e74c3c); }
         .btn-fb { background: linear-gradient(45deg, #3b5998, #4e71ba, #00c6ff); }
-        
-        /* ΕΔΩ Η ΔΙΟΡΘΩΣΗ: ΕΓΧΡΩΜΗ ΦΩΝΗ ΔΕΣΚΑΤΗΣ */
         .btn-voice { background: linear-gradient(45deg, #8e44ad, #c0392b, #f1c40f); }
-        
-        /* ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ */
-        .btn-phones { background: linear-gradient(45deg, #00d2ff, #3a7bd5); color: white; }
+        .btn-phones { background: linear-gradient(45deg, #00d2ff, #3a7bd5); }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="icon.png" alt="Γήλοφος" class="logo">
+        <img src="icon.png" class="logo">
         <h1>ΓΗΛΟΦΟΣ</h1>
         <div class="btn-container">
             <a href="http://gilofos.com" class="btn btn-village" target="_blank">ΣΕΛΙΔΑ ΧΩΡΙΟΥ</a>
             <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-weather" target="_blank">ΚΑΙΡΟΣ ΓΗΛΟΦΟΥ</a>
             <a href="https://www.facebook.com/profile.php?id=100003010373079" class="btn btn-fb" target="_blank">FACEBOOK</a>
-            
             <a href="https://www.facebook.com/profile.php?id=61580420192179" class="btn btn-voice" target="_blank">ΦΩΝΗ ΔΕΣΚΑΤΗΣ</a>
-            
             <a href="phones.html" class="btn btn-phones">ΧΡΗΣΙΜΑ ΤΗΛΕΦΩΝΑ ΔΗΜΟΥ ΔΕΣΚΑΤΗΣ</a>
         </div>
     </div>
