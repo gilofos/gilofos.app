@@ -3,56 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΓΗΛΟΦΟΣ - ΟΛΑ ΤΑ ΤΗΛΕΦΩΝΑ</title>
+    <title>ΚΑΤΑΛΟΓΟΣ ΓΗΛΟΦΟΥ</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; }
-        .container { margin-top: 20px; text-align: center; width: 95%; }
-        h1 { color: #96c93d; font-size: 1.8em; }
-        .btn-container { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 380px; margin: 20px auto; }
-        .btn { display: block; padding: 15px; text-decoration: none; color: white; font-weight: bold; border-radius: 12px; text-align: center; cursor: pointer; border: none; font-size: 1em; }
-        .btn-main { background: linear-gradient(45deg, #1e3c72, #2ecc71); }
+        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', sans-serif; }
+        .header { background: #1e3c72; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        h1 { margin: 0; font-size: 1.5em; letter-spacing: 1px; color: #96c93d; }
+        .container { padding: 15px; max-width: 500px; margin: auto; }
         
-        /* Η ΛΙΣΤΑ */
-        .phone-section { background: #1e1e1e; border-radius: 15px; padding: 15px; margin-bottom: 20px; border: 1px solid #333; text-align: left; }
-        .phone-section h3 { margin-top: 0; color: #96c93d; border-bottom: 1px solid #96c93d; padding-bottom: 5px; font-size: 1.1em; }
-        .row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #222; }
-        .row span { font-size: 0.95em; }
-        .row a { background: #96c93d; color: black; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.85em; }
+        .section { background: #1e1e1e; border-radius: 12px; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
+        .section-title { background: #96c93d; color: black; padding: 10px 15px; font-weight: bold; font-size: 1em; text-transform: uppercase; }
+        .row { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; border-bottom: 1px solid #2a2a2a; }
+        .row:last-child { border-bottom: none; }
+        .name { font-size: 0.95em; color: #eee; font-weight: 500; }
+        .call-btn { background: #2ecc71; color: black; padding: 10px 18px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+        
+        .footer { text-align:center; padding: 30px; color: #555; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>ΚΑΤΑΛΟΓΟΣ ΓΗΛΟΦΟΥ</h1>
-        
-        <div class="btn-container">
-            <a href="https://gilofos.github.io/weather-gilofos/" class="btn btn-main">ΠΙΣΩ ΣΤΟΝ ΚΑΙΡΟ</a>
-        </div>
+<div class="header">
+    <h1>ΚΑΤΑΛΟΓΟΣ ΤΗΛΕΦΩΝΩΝ</h1>
+</div>
 
-        <div class="phone-section">
-            <h3>ΔΗΜΟΣ & ΥΠΗΡΕΣΙΕΣ</h3>
-            <div class="row"><span>ΔΗΜΑΡΧΕΙΟ:</span> <a href="tel:2462351101">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΚΕΠ ΔΕΣΚΑΤΗΣ:</span> <a href="tel:2462351153">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΑΣΤΥΝΟΜΙΑ:</span> <a href="tel:2462031111">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΠΥΡΟΣΒΕΣΤΙΚΗ:</span> <a href="tel:2462034199">ΚΛΗΣΗ</a></div>
-        </div>
-
-        <div class="phone-section">
-            <h3>ΥΓΕΙΑ</h3>
-            <div class="row"><span>Κ. ΥΓΕΙΑΣ ΔΕΣΚΑΤΗΣ:</span> <a href="tel:2462351000">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΕΚΑΒ (ΕΠΕΙΓΟΝΤΑ):</span> <a href="tel:166">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΦΑΡΜΑΚΕΙΟ (ΔΕΣΚΑΤΗ):</span> <a href="tel:2462031215">ΚΛΗΣΗ</a></div>
-        </div>
-
-        <div class="phone-section">
-            <h3>ΧΡΗΣΙΜΑ ΧΩΡΙΟΥ</h3>
-            <div class="row"><span>ΒΛΑΒΕΣ ΔΕΗ (ΔΕΔΔΗΕ):</span> <a href="tel:8004004000">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΒΛΑΒΕΣ ΥΔΡΕΥΣΗΣ:</span> <a href="tel:2462351101">ΚΛΗΣΗ</a></div>
-            <div class="row"><span>ΤΑΞΙ ΔΕΣΚΑΤΗΣ:</span> <a href="tel:2462031310">ΚΛΗΣΗ</a></div>
-        </div>
-
-        <p style="color: #666; font-size: 0.8em;">Ενημέρωση 2026</p>
+<div class="container">
+    
+    <div class="section">
+        <div class="section-title">ΥΓΕΙΑ & ΕΚΤΑΚΤΑ</div>
+        <div class="row"><span class="name">Κ. ΥΓΕΙΑΣ ΔΕΣΚΑΤΗΣ</span> <a href="tel:2462351000" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΕΚΑΒ (ΑΜΕΣΗ ΒΟΗΘΕΙΑ)</span> <a href="tel:166" class="call-btn">166</a></div>
+        <div class="row"><span class="name">ΦΑΡΜΑΚΕΙΟ ΔΕΣΚΑΤΗΣ</span> <a href="tel:2462031215" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΑΣΤΥΝΟΜΙΑ ΔΕΣΚΑΤΗΣ</span> <a href="tel:2462031111" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΠΥΡΟΣΒΕΣΤΙΚΗ ΔΕΣΚΑΤΗΣ</span> <a href="tel:2462034199" class="call-btn">ΚΛΗΣΗ</a></div>
     </div>
 
-</body>
-</html>
+    <div class="section">
+        <div class="section-title">ΔΗΜΟΣ ΔΕΣΚΑΤΗΣ</div>
+        <div class="row"><span class="name">ΔΗΜΑΡΧΕΙΟ (ΚΕΝΤΡΟ)</span> <a href="tel:2462351101" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΚΕΠ ΔΕΣΚΑΤΗΣ</span> <a href="tel:2462351153" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΒΛΑΒΕΣ ΥΔΡΕΥΣΗΣ</span> <a href="tel:2462351101" class="call-btn">ΚΛΗΣΗ</a></div>
+        <div class="row"><span class="name">ΒΟΗΘΕΙΑ ΣΤΟ ΣΠΙΤΙ</span> <a href="tel:2462032332" class="call-btn">ΚΛΗΣΗ</a></div>
+    </div>
